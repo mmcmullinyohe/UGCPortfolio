@@ -1,0 +1,517 @@
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf7;
+    color: #2f2927;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+------------------------------ */
+
+header {
+    background-color: rgba(255, 250, 247, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eadfd9;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #c47979;
+}
+
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+
+.hero {
+    max-width: 1200px;
+    min-height: 85vh;
+    margin: 0 auto;
+    padding: 80px 40px;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.eyebrow,
+.section-label {
+    color: #b66c6c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #b66c6c;
+}
+
+.hero-description {
+    max-width: 560px;
+    font-size: 1.1rem;
+    color: #655d59;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* ------------------------------
+   BUTTONS
+------------------------------ */
+
+.btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.primary-btn {
+    background-color: #b66c6c;
+    color: white;
+    border: 2px solid #b66c6c;
+}
+
+.primary-btn:hover {
+    background-color: #995757;
+    border-color: #995757;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid #2f2927;
+}
+
+.secondary-btn:hover {
+    background-color: #2f2927;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* ------------------------------
+   HERO IMAGE
+------------------------------ */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: min(100%, 420px);
+    aspect-ratio: 4 / 5;
+
+    background-color: #ead8d1;
+    border-radius: 180px 180px 30px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #876d66;
+    font-weight: 600;
+}
+
+
+/* ------------------------------
+   GENERAL SECTIONS
+------------------------------ */
+
+section {
+    padding: 100px 40px;
+}
+
+section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    color: #655d59;
+    font-size: 1.05rem;
+}
+
+
+/* ------------------------------
+   ABOUT
+------------------------------ */
+
+.about {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about p:not(.section-label) {
+    color: #655d59;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+
+/* ------------------------------
+   PORTFOLIO
+------------------------------ */
+
+.portfolio {
+    background-color: #f5ebe6;
+    text-align: center;
+}
+
+.portfolio > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-grid {
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.video-card {
+    text-align: left;
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+
+    background-color: #dfc9c1;
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(60, 40, 30, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.video-placeholder:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(60, 40, 30, 0.14);
+}
+
+.video-placeholder span {
+    color: #7d655f;
+    font-weight: 600;
+}
+
+.video-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.video-card p {
+    color: #6c625e;
+    font-size: 0.95rem;
+}
+
+
+/* ACTUAL VIDEOS LATER */
+
+.video-card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+
+    border-radius: 22px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 10px 30px rgba(60, 40, 30, 0.08);
+}
+
+
+/* ------------------------------
+   SERVICES
+------------------------------ */
+
+.services {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services h2 {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service {
+    background-color: white;
+    padding: 35px 25px;
+    border: 1px solid #eadfd9;
+    border-radius: 18px;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(60, 40, 30, 0.08);
+}
+
+.service h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.service p {
+    color: #6c625e;
+    font-size: 0.95rem;
+}
+
+
+/* ------------------------------
+   CONTACT
+------------------------------ */
+
+.contact {
+    background-color: #2f2927;
+    color: white;
+    text-align: center;
+}
+
+.contact .section-label {
+    color: #e6b6ad;
+}
+
+.contact h2 {
+    margin-bottom: 18px;
+}
+
+.contact p {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    color: #ded5d1;
+}
+
+.contact .primary-btn {
+    background-color: #e5aea5;
+    border-color: #e5aea5;
+    color: #2f2927;
+}
+
+.contact .primary-btn:hover {
+    background-color: #f2c6bf;
+    border-color: #f2c6bf;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    background-color: #211c1a;
+    color: #c7bbb6;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.85rem;
+}
+
+
+/* ------------------------------
+   TABLET
+------------------------------ */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-text {
+        margin: 0 auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .image-placeholder {
+        max-width: 330px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 60px 22px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+
+    section {
+        padding: 75px 22px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        max-width: 330px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
